@@ -56,7 +56,7 @@ async function build() {
 
     fs.writeFileSync('ca_bundle/ca_intermediate_bundle.pem', ca_intermediate_bundle);
     fs.writeFileSync('ca_bundle/ca_root_bundle.pem', ca_root_bundle);
-    fs.writeFileSync('ca_bundle/ca_intermediate_root_bundle.pem', ca_intermediate_bundle + ca_root_bundle);
+    fs.writeFileSync('ca_bundle/ca_intermediate_root_bundle.pem', ca_root_bundle + ca_intermediate_bundle);
 
     console.log();
     console.log('Intermediate and Root Certificate Bundles from Mozilla generated');
